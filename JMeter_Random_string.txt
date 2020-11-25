@@ -1,0 +1,23 @@
+import java.util.Random; 
+String random_len(int string_length) {
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz123456789"; 
+    randomstring =""; 
+    for (int i=0; i<string_length; i++) { 
+        Random randomGenerator = new Random(); 
+        int randomInt = randomGenerator.nextInt(chars.length()); 
+        randomstring += chars.substring(randomInt,randomInt+1); 
+    } 
+    return randomstring;
+}
+String random_lenint(int string_length) {
+    chars = "123456789"; 
+    randomint =""; 
+    for (int i=0; i<string_length; i++) { 
+        Random randomGenerator = new Random(); 
+        int randomInt = randomGenerator.nextInt(chars.length()); 
+        randomint += chars.substring(randomInt,randomInt+1); 
+    } 
+    return randomint;
+}
+vars.put("gid2","test"+random_len(16));
+vars.put("level",random_lenint(2));
