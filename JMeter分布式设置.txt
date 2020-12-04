@@ -3,6 +3,18 @@
 linux上 bash_profile 是全局变量
 用户目录下的   .bashrc 是用户变量  设置之后，对当前用户设置
 
+环境变量配置
+#配置JDK
+export JAVA_HOME=/data/opt/java/jdk1.8.0_131  （jdk安装路径）
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+
+#配置JMeter
+export JMETER_HOME=  （JMeter安装路径）
+export PATH=${JMETER_HOME}/bin:$PATH
+export PATH=${JAVA_HOME}/bin:$PATH
+
+
 2、配置jmeter执行机
 jmeter.properties 文件 
 修改配置：
