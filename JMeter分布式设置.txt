@@ -1,0 +1,23 @@
+构建linux环境的分布式
+1、构建好java的环境变量
+linux上 bash_profile 是全局变量
+用户目录下的   .bashrc 是用户变量  设置之后，对当前用户设置
+
+2、配置jmeter执行机
+jmeter.properties 文件 
+修改配置：
+server.rmi.ssl.disable=true
+server_port=1099 #执行机服务的端口
+server.rmi.localport=1099   为防止启动时端口地址会变更多个，可以设置这个参数为指定端口
+
+jmeter-server文件
+修改配置：
+ -Djava.rmi.server.hostname=XXX.XXX.XXX.XXX（执行机的本地ip）
+ 
+3、控制机配置
+jmeter.properties 文件 
+修改配置：
+remote_hosts=172.17.51.15:1299（执行机的ip和端口）
+server.rmi.ssl.disable=true
+server_port=1099 #控制机服务的端口
+server.rmi.localport=1099   为防止启动时端口地址会变更多个，可以设置这个参数为指定端口
